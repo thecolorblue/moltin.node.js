@@ -52,11 +52,16 @@ class NodeMoltin extends Moltin
 
 			return @
 
+		if @options.clientSecret && @options.username && @options.password
+			grantType = 'password'
+		else 
+			grantType = 'implicit'
+
 		@Ajax
 			type: 'POST'
 			url: @options.url+'oauth/access_token'
 			data:
-	            'grant_type'   : 'password'
+	            'grant_type'   : grantType
 	            'username'     : @options['username']
 	            'password'     : @options['password']
 	            'client_id'    : @options.publicId
