@@ -1,4 +1,4 @@
-require("coffee-script");
+require('coffee-script/register');
 
 module.exports = {
 	server: require('./src/index.coffee'),

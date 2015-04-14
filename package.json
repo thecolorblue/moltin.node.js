@@ -1,0 +1,14 @@
+{
+  "name": "moltin.js",
+  "version": "0.0.1",
+  "description": "Moltin Library for Node.js and Common.js",
+  "author" : "Brad Davis <brad.bdavis1@gmail.com>",
+  "main" : "index.js",
+  "dependencies": {
+    "axios": "^0.5.4",
+    "coffee-script": "^1.9.1"
+  },
+  "engines" : {
+  	"node" : "v0.10.36"
+  }
+}
