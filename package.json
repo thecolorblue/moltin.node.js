@@ -1,6 +1,6 @@
 {
   "name": "moltin",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Moltin Library for Node.js and Common.js",
   "author" : "Brad Davis <brad.bdavis1@gmail.com>",
   "main" : "index.js",

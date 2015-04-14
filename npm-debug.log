@@ -1,0 +1,95 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/Beegit/.nvm/v0.10.36/bin/node',
+1 verbose cli   '/Users/Beegit/.nvm/v0.10.36/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   '--tag',
+1 verbose cli   'beta' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.36
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/Beegit/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/Users/Beegit/.npm/moltin/0.0.1/package.tgz', '.' ]
+11 verbose tarball /Users/Beegit/.npm/moltin/0.0.1/package.tgz
+12 verbose folder .
+13 info prepublish moltin@0.0.1
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/Beegit/.npm/1f1177db-tar.lock
+16 silly lockFile 3e42946c-git-npm-moltin-0-0-1-package-tgz tar:///Users/Beegit/.npm/moltin/0.0.1/package.tgz
+17 verbose lock tar:///Users/Beegit/.npm/moltin/0.0.1/package.tgz /Users/Beegit/.npm/3e42946c-git-npm-moltin-0-0-1-package-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 3e42946c-git-npm-moltin-0-0-1-package-tgz tar:///Users/Beegit/.npm/moltin/0.0.1/package.tgz
+21 silly lockFile 3e42946c-git-npm-moltin-0-0-1-package-tgz tar:///Users/Beegit/.npm/moltin/0.0.1/package.tgz
+22 silly lockFile 4b84f7c1--Beegit-npm-moltin-0-0-1-package /Users/Beegit/.npm/moltin/0.0.1/package
+23 verbose lock /Users/Beegit/.npm/moltin/0.0.1/package /Users/Beegit/.npm/4b84f7c1--Beegit-npm-moltin-0-0-1-package.lock
+24 silly lockFile 4b84f7c1--Beegit-npm-moltin-0-0-1-package /Users/Beegit/.npm/moltin/0.0.1/package
+25 silly lockFile 4b84f7c1--Beegit-npm-moltin-0-0-1-package /Users/Beegit/.npm/moltin/0.0.1/package
+26 silly lockFile 3a52ce78- .
+27 silly lockFile 3a52ce78- .
+28 silly publish { name: 'moltin',
+28 silly publish   version: '0.0.1',
+28 silly publish   description: 'Moltin Library for Node.js and Common.js',
+28 silly publish   author: { name: 'Brad Davis', email: 'brad.bdavis1@gmail.com' },
+28 silly publish   main: 'index.js',
+28 silly publish   dependencies: { axios: '^0.5.4', 'coffee-script': '^1.9.1' },
+28 silly publish   engines: { node: 'v0.10.36' },
+28 silly publish   readme: 'Moltin Library for Node.js and Common.js\n\nexample (for node):\n\n\tvar path = require(\'path\');\n\tvar Moltin = require(\'moltin.js\').server;\n\n\tvar moltin = new Moltin({\n\t\tpublicId: \'<YOUR MOLTIN APP ID>\',\n\n\t\t// these are optional if you only want to make get requests\n\t\t// but are required to post any data\n\t\tclientSecret: \'<Your CLIENT ID>\',\n\t\tusername: \'<YOUR FORGE USERNAME>\',\n\t\tpassword: \'<YOUR FORGE PASSWORD>\'\n\t});\n\n\tmoltin.Authenticate(function() {\n\t\tmoltin.Category.List(null, function(categories) {\n\t\t\tmoltin.categories = categories.result;\n\t\t\tconsole.log(\'moltin ready\');\n\t\t}, function(error) {\n\t\t    // Something went wrong...\n\t\t});\n\t\t\n\t\t// should things happen here?\n\t}, function() {\n\t\tconsole.log(\'auth failed:\', arguments);\n\t});\n\n\tmodule.exports = moltin;',
+28 silly publish   readmeFilename: 'README.md',
+28 silly publish   gitHead: '2f94e5380bf909d3107aca524b02ccb4bc733602',
+28 silly publish   _id: 'moltin@0.0.1',
+28 silly publish   scripts: {},
+28 silly publish   _shasum: 'afd0e9c30b01b0d9a30812f0580e260710dbd7a0',
+28 silly publish   _from: '.' }
+29 verbose request where is /moltin
+30 verbose request registry http://registry.beegit.com/
+31 verbose request id b29a87b29078f7d9
+32 verbose url raw /moltin
+33 verbose url resolving [ 'http://registry.beegit.com/', './moltin' ]
+34 verbose url resolved http://registry.beegit.com/moltin
+35 verbose request where is http://registry.beegit.com/moltin
+36 info trying registry request attempt 1 at 23:48:49
+37 http PUT http://registry.beegit.com/moltin
+38 http 403 http://registry.beegit.com/moltin
+39 verbose headers { 'x-powered-by': 'Sinopia/1.0.0',
+39 verbose headers   'content-type': 'application/json; charset=utf-8',
+39 verbose headers   'content-length': '61',
+39 verbose headers   vary: 'Accept-Encoding',
+39 verbose headers   'x-status-cat': 'http://flic.kr/p/aV6jFK',
+39 verbose headers   date: 'Tue, 14 Apr 2015 03:48:49 GMT',
+39 verbose headers   connection: 'keep-alive' }
+40 error publish Failed PUT 403
+41 error Error: user thecolorblue not allowed to publish it : moltin
+41 error     at RegClient.<anonymous> (/Users/Beegit/.nvm/v0.10.36/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:308:14)
+41 error     at Request._callback (/Users/Beegit/.nvm/v0.10.36/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:246:65)
+41 error     at Request.self.callback (/Users/Beegit/.nvm/v0.10.36/lib/node_modules/npm/node_modules/request/request.js:236:22)
+41 error     at Request.emit (events.js:98:17)
+41 error     at Request.<anonymous> (/Users/Beegit/.nvm/v0.10.36/lib/node_modules/npm/node_modules/request/request.js:1142:14)
+41 error     at Request.emit (events.js:117:20)
+41 error     at IncomingMessage.<anonymous> (/Users/Beegit/.nvm/v0.10.36/lib/node_modules/npm/node_modules/request/request.js:1096:12)
+41 error     at IncomingMessage.emit (events.js:117:20)
+41 error     at _stream_readable.js:944:16
+41 error     at process._tickCallback (node.js:442:13)
+42 error If you need help, you may report this *entire* log,
+42 error including the npm and node versions, at:
+42 error     <http://github.com/npm/npm/issues>
+43 error System Darwin 14.1.0
+44 error command "/Users/Beegit/.nvm/v0.10.36/bin/node" "/Users/Beegit/.nvm/v0.10.36/bin/npm" "publish" "--tag" "beta"
+45 error cwd /Users/Beegit/Dev/moltin.node
+46 error node -v v0.10.36
+47 error npm -v 1.4.28
+48 verbose exit [ 1, true ]
