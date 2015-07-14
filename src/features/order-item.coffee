@@ -1,10 +1,10 @@
 class OrderItem
 
-	constructor: (@m) ->
+  constructor: (@m) ->
 
-	Get: (id, callback, error) ->
+  Get: (id, callback, error) ->
 
-		return @m.Request 'order/'+id+'/items', 'GET', null, callback, error
+    return @m.Request 'order/'+id+'/items', 'GET', null, callback, error
 
 if module
-	module.exports = OrderItem;
+  module.exports = OrderItem;

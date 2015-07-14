@@ -1,10 +1,10 @@
 class Transaction
 
-	constructor: (@m) ->
+  constructor: (@m) ->
 
-	List: (terms, callback, error) ->
+  List: (terms, callback, error) ->
 
-		return @m.Request 'transactions', 'GET', terms, callback, error
+    return @m.Request 'transactions', 'GET', terms, callback, error
 
 if module
-	module.exports = Transaction;
+  module.exports = Transaction;

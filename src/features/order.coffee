@@ -1,26 +1,26 @@
 class Order
 
-	constructor: (@m) ->
+  constructor: (@m) ->
 
-	Get: (id, callback, error) ->
+  Get: (id, callback, error) ->
 
-		return @m.Request 'order/'+id, 'GET', null, callback, error
+    return @m.Request 'order/'+id, 'GET', null, callback, error
 
-	Find: (terms, callback, error) ->
+  Find: (terms, callback, error) ->
 
-		return @m.Request 'order', 'GET', terms, callback, error
+    return @m.Request 'order', 'GET', terms, callback, error
 
-	List: (terms, callback, error) ->
+  List: (terms, callback, error) ->
 
-		return @m.Request 'orders', 'GET', terms, callback, error
+    return @m.Request 'orders', 'GET', terms, callback, error
 
-	Update: (changes, callback, error) ->
+  Update: (changes, callback, error) ->
 
-		return @m.Request 'orders/'+changes.id, 'PUT', changes, callback, error
+    return @m.Request 'orders/'+changes.id, 'PUT', changes, callback, error
 
-	Create: (data, callback, error) ->
+  Create: (data, callback, error) ->
 
-		return @m.Request 'order', 'POST', data, callback, error
+    return @m.Request 'order', 'POST', data, callback, error
 
 if module
-	module.exports = Order;
+  module.exports = Order;
