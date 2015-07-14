@@ -1,19 +1,20 @@
-Address    = require('./features/address.coffee')
-Brand      = require('./features/brand.coffee')
-Cart       = require('./features/cart.coffee')
-Category   = require('./features/category.coffee')
-Checkout   = require('./features/checkout.coffee')
-Collection = require('./features/collection.coffee')
-Currency   = require('./features/currency.coffee')
-Customer   = require('./features/customer.coffee')
-Entry      = require('./features/entry.coffee')
-Gateway    = require('./features/gateway.coffee')
-Order      = require('./features/order.coffee')
-OrderItem  = require('./features/order-item.coffee')
-Product    = require('./features/product.coffee')
-Shipping   = require('./features/shipping.coffee')
-Tax        = require('./features/tax.coffee')
-Storage    = require('./features/storage.coffee')
+Address     = require('./features/address.coffee')
+Brand       = require('./features/brand.coffee')
+Cart        = require('./features/cart.coffee')
+Category    = require('./features/category.coffee')
+Checkout    = require('./features/checkout.coffee')
+Collection  = require('./features/collection.coffee')
+Currency    = require('./features/currency.coffee')
+Customer    = require('./features/customer.coffee')
+Entry       = require('./features/entry.coffee')
+Gateway     = require('./features/gateway.coffee')
+Order       = require('./features/order.coffee')
+OrderItem   = require('./features/order-item.coffee')
+Product     = require('./features/product.coffee')
+Shipping    = require('./features/shipping.coffee')
+Tax         = require('./features/tax.coffee')
+Storage     = require('./features/storage.coffee')
+Transaction = require('./features/transaction.coffee')
 
 class Moltin
 
@@ -34,21 +35,22 @@ class Moltin
 		@options = @Merge @options, overrides
 		@Storage = new Storage
 
-		@Address    = new Address @
-		@Brand      = new Brand @
-		@Cart       = new Cart @
-		@Category   = new Category @
-		@Checkout   = new Checkout @
-		@Collection = new Collection @
-		@Currency   = new Currency @
-		@Customer   = new Customer @
-		@Entry      = new Entry @
-		@Gateway    = new Gateway @
-		@Order      = new Order @
-		@OrderItem  = new OrderItem @
-		@Product    = new Product @
-		@Shipping   = new Shipping @
-		@Tax        = new Tax @
+		@Address      = new Address @
+		@Brand        = new Brand @
+		@Cart         = new Cart @
+		@Category     = new Category @
+		@Checkout     = new Checkout @
+		@Collection   = new Collection @
+		@Currency     = new Currency @
+		@Customer     = new Customer @
+		@Entry        = new Entry @
+		@Gateway      = new Gateway @
+		@Order        = new Order @
+		@OrderItem    = new OrderItem @
+		@Product      = new Product @
+		@Shipping     = new Shipping @
+		@Tax          = new Tax @
+    @Transaction  = new Transaction @
 
 		if @Storage.get 'mcurrency'
 			@options.currency = @Storage.get 'mcurrency'
