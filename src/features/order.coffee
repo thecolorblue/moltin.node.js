@@ -21,6 +21,10 @@ class Order
 	Create: (data, callback, error) ->
 
 		return @m.Request 'order', 'POST', data, callback, error
+		
+	GetItems: (id, callback, error) ->
+		
+		return @m.Request 'order/'+id+'/items', 'GET', null, callback, error
 
 if module
 	module.exports = Order;
